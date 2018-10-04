@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec generated="20181003 18:24:05" type="library" name="AllureReportLibrary" format="ROBOT">
+<version>1.1.1</version>
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>Allure Report Library
+
+The Allure Adaptor for Robot Framework is a Library that can be included
+in the Robot scripts to generate Allure
+compatible XML files which can then be used to generate the Allure HTML
+reports. These reports provide a clear and dynamic overview of the status
+of the test run through several graphs and a time line overview of the run
+itself.
+
+Optionally an argument can be provided to have the Allure adapter store its 
+files in a different folder from the normal Robot Framework log files. 
+
+    Library           AllureReportLibrary     C:\Temp\Allure</doc>
+<init>
+<arguments>
+<arg>AllureOutputPath=None</arg>
+</arguments>
+<doc></doc>
+<tags>
+</tags>
+</init>
+<kw name="Set Output Dir">
+<arguments>
+<arg>output_dir</arg>
+</arguments>
+<doc>This is the output method short line.
+
+This is the output method long line.</doc>
+<tags>
+</tags>
+</kw>
+</keywordspec>
