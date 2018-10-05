@@ -7,6 +7,8 @@ Variables         ../Variables/Variables2.yaml
 
 *** Keywords ***
 Login
+    [Documentation]    feature: Login to Mercury Travels application with correct user
+    Set Tags    Smoke    Story: Login to Mercury Travels with user mercury/mercury    
     Input Text    name: userName    ${UserName}
     Input Text    name: password    ${password}
     Click Element    name: login
@@ -15,6 +17,8 @@ LaunchURL
     Open Browser    ${URL}    ${Browser}
 
 SearchFlight
+    [Documentation]    feature: Search Flights from desired from and to location
+    Set Tags    Smoke    Story: Given a search page when from and to destination are available Then User should be able to search for flights.    
     Select Radio Button    tripType    oneway
     Select From List By Value    fromPort    Frankfurt
     Select From List By Value    fromMonth    10
