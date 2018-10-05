@@ -53,3 +53,17 @@ Personal Details
     
 Validate Itinerary
     Element Should Be Visible    xpath: //*[@src="/images/masts/mast_confirmation.gif"]
+RegisterUser
+    [Documentation]    feature: Register New user by providing details
+    Set Tags    RegisterUser
+    Click Link    xpath: //a[@href="mercuryregister.php"]
+    Input Text    firstName    ${NewUser.firstName}
+    Input Text    lastName    ${NewUser.LastName1}
+    Input Text    phone    ${NewUser.phone}
+    Input Text    userName    ${NewUser.Email ID}
+    Input Text    address1    ${NewUser.Address1}
+    Input Text    address2    ${NewUser.Address2}
+    Input Text    city    ${NewUser.City}
+    Input Text    state    ${NewUser.State}
+    Input Text    postalCode    ${NewUser.PostalCode}
+    Select From List By Value    country    ${NewUser.Country}    

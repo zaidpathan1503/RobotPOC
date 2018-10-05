@@ -7,8 +7,8 @@ Resource          ../Variables/GlobalVariables.robot
        
 
 #Test Teardown
-Suite Teardown    Close Browser
 Default Tags    TestSuite1
+Test Teardown    Close Browser
 *** Test Cases ***
 TC1_Test
     [Tags]    SmokeTest
@@ -18,12 +18,17 @@ TC1_Test
     SelectFlight
     Personal Details
     Validate Itinerary
-    [Teardown]    Close Browser
     
 TC2_Test
+    [Documentation]    This will show on Allure Report Description
     LaunchURL
     Login
     SearchFlight
     SelectFlight
     Personal Details
     Validate Itinerary
+
+TC3_Test
+    [Documentation]    This will register User
+    LaunchURL
+    RegisterUser
