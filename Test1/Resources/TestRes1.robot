@@ -2,13 +2,14 @@
 Library           SeleniumLibrary
 Library           Collections
 Library           Dialogs
-Variables         ../Variables/Variables1.yaml   
+Library           BuiltIn
+Variables         ../Variables/Variables1.yaml
 Variables         ../Variables/Variables2.yaml
 
 *** Keywords ***
 Login
     [Documentation]    feature: Login to Mercury Travels application with correct user
-    Set Tags    Smoke    Story: Login to Mercury Travels with user mercury/mercury    
+    Set Tags    Smoke    Story: Login to Mercury Travels with user mercury/mercury
     Input Text    name: userName    ${UserName}
     Input Text    name: password    ${password}
     Click Element    name: login
@@ -18,7 +19,7 @@ LaunchURL
 
 SearchFlight
     [Documentation]    feature: Search Flights from desired from and to location
-    Set Tags    Smoke    Story: Given a search page when from and to destination are available Then User should be able to search for flights.    
+    Set Tags    Smoke    Story: Given a search page when from and to destination are available Then User should be able to search for flights.
     Select Radio Button    tripType    oneway
     Select From List By Value    fromPort    Frankfurt
     Select From List By Value    fromMonth    10
@@ -32,7 +33,7 @@ SearchFlight
 SelectFlight
     #Select Radio Button    outFlight
     Click Element    reserveFlights
-    
+
 Personal Details
     Input Text    name: passFirst0    ${FirstName}
     Input Text    name: passLast0    ${LastName}
@@ -50,20 +51,27 @@ Personal Details
     Select From List By Label    billCountry    UNITED STATES
     Select Checkbox    checkbox
     Click Element    buyFlights
-    
+
 Validate Itinerary
     Element Should Be Visible    xpath: //*[@src="/images/masts/mast_confirmation.gif"]
+
 RegisterUser
     [Documentation]    feature: Register New user by providing details
     Set Tags    RegisterUser
-    Click Link    xpath: //a[@href="mercuryregister.php"]
+    #Click Link    xpath: //a[@href="mercuryregister.php"]
+    #Sleep    2s
+    Click Link    xpath: //a[contains(text(),'REGISTER')]
     Input Text    firstName    ${NewUser.firstName}
-    Input Text    lastName    ${NewUser.LastName1}
+    Input Text    lastName    ${NewUser.lastName}
     Input Text    phone    ${NewUser.phone}
-    Input Text    userName    ${NewUser.Email ID}
+    Input Text    userName    ${NewUser.Email_ID}
     Input Text    address1    ${NewUser.Address1}
     Input Text    address2    ${NewUser.Address2}
     Input Text    city    ${NewUser.City}
     Input Text    state    ${NewUser.State}
     Input Text    postalCode    ${NewUser.PostalCode}
-    Select From List By Value    country    ${NewUser.Country}    
+    Select From List By Label    country    ${NewUser.Country}
+    Input Text    email    ${NewUser.UserName}
+    Input Text    password    ${NewUser.password}
+    Input Text    confirmPassword    ${NewUser.password}
+    Click Element    register

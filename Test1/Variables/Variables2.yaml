@@ -9,12 +9,14 @@ NewUser:
   firstName: FirstName1
   lastName: LastName1
   phone: +91 97892 23145
-  Email ID: abc@gmail.com
-  Address:
-    -Line 1
-    -Line 2
+  Email_ID: abc@gmail.com
+  Address1: Line 1
+  Address2: Line 2
   City: Kitchener
   State: Ontario
   PostalCode: M41 ZKY
-  Country: Canada
+  Country: CANADA
+  UserName: test
+  password: test
+  
 ...

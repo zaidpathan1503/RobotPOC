@@ -2,6 +2,7 @@
 Library           SeleniumLibrary
 Library           Collections
 Library           Dialogs
+Library           BuiltIn
 Resource          ../Resources/TestRes1.robot
 Resource          ../Variables/GlobalVariables.robot
        
