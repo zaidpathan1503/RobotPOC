@@ -2,7 +2,6 @@
 Library           SeleniumLibrary
 Library           Collections
 Library           Dialogs
-Library           AllureReportLibrary
 Resource          ../Resources/TestRes1.robot
 Resource          ../Variables/GlobalVariables.robot
        
