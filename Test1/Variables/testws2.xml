@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
-   <Header />
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">250<Header />
    <Body>
       <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-         <ubiNum>240</ubiNum>
+         <ubiNum>?</ubiNum>
       </NumberToWords>
    </Body>
-</Envelope>
+</Envelope>Body/NumberToWords/ubiNum

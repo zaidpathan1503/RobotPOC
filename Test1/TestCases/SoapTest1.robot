@@ -6,6 +6,8 @@ Library           String
 Library           OperatingSystem
 Library           Dialogs
 Library           Collections
+Resource          ../Resources/SoapWS.robot
+Resource          ../Variables/GlobalVariables.robot
 
 *** Test Cases ***
 TestSoapWS
@@ -24,3 +26,10 @@ TestSoapWS
     ${root}=    Parse Xml    ${message}
     ${ResponseVal}=    Get Element Text    ${root}    Body/NumberToWordsResponse/NumberToWordsResult
     Log    ${ResponseVal}
+
+TestSoapWS2
+    GetRequestXML
+    Create WS Client
+    Send WS request
+    Validate Response
+      
