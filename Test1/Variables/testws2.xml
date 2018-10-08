@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Envelope>240<Header />
+   <Body>
+      <NumberToDollars>
+         <dNum>?</dNum>
+      </NumberToDollars>
+   </Body>
+</Envelope>xpath: Body/NumberToWords/ubiNum
