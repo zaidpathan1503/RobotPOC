@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181008 11:18:25.112" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
+<robot generated="20181008 11:46:13.788" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
 <suite source="C:\Users\zapathan\git\RobotPOC" id="s1" name="RobotPOC">
 <suite source="C:\Users\zapathan\git\RobotPOC\Test1" id="s1-s1" name="Test1">
 <suite source="C:\Users\zapathan\git\RobotPOC\Test1\TestCases" id="s1-s1-s1" name="TestCases">
@@ -13,13 +13,12 @@
 <assign>
 <var>${xmlData}</var>
 </assign>
-<msg timestamp="20181008 11:18:26.053" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml&lt;/a&gt;'.</msg>
-<msg timestamp="20181008 11:18:26.055" level="INFO">${xmlData} = &lt;Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.dataaccess.com/webservicesserver/"&gt;
-   &lt;Header&gt;&lt;/Header&gt;
-   &lt;Body&gt;
-      &lt;NumberToDollars&gt;
-         &lt;dNum&gt;...</msg>
-<status status="PASS" endtime="20181008 11:18:26.056" starttime="20181008 11:18:26.051"></status>
+<msg timestamp="20181008 11:46:17.012" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml&lt;/a&gt;'.</msg>
+<msg timestamp="20181008 11:46:17.014" level="INFO">${xmlData} = &lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.dataaccess.com/webservicesserver/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;web:NumberToWords...</msg>
+<status status="PASS" endtime="20181008 11:46:17.015" starttime="20181008 11:46:17.001"></status>
 </kw>
 <kw name="Parse Xml" library="XML">
 <doc>Parses the given XML file or string into an element structure.</doc>
@@ -29,17 +28,17 @@
 <assign>
 <var>${root}</var>
 </assign>
-<msg timestamp="20181008 11:18:26.058" level="INFO">${root} = &lt;Element 'Envelope' at 0x00000000042512A0&gt;</msg>
-<status status="PASS" endtime="20181008 11:18:26.058" starttime="20181008 11:18:26.057"></status>
+<msg timestamp="20181008 11:46:17.019" level="INFO">${root} = &lt;Element 'Envelope' at 0x000000000449D810&gt;</msg>
+<status status="PASS" endtime="20181008 11:46:17.019" starttime="20181008 11:46:17.017"></status>
 </kw>
 <kw name="Set Element Text" library="XML">
 <doc>Sets text and/or tail text of the specified element.</doc>
 <arguments>
 <arg>${root}</arg>
 <arg>240</arg>
-<arg>xpath: Body/NumberToWords/ubiNum</arg>
+<arg>xpath=Body/NumberToWords/ubiNum</arg>
 </arguments>
-<status status="PASS" endtime="20181008 11:18:26.060" starttime="20181008 11:18:26.059"></status>
+<status status="PASS" endtime="20181008 11:46:17.025" starttime="20181008 11:46:17.021"></status>
 </kw>
 <kw name="Save Xml" library="XML">
 <doc>Saves the given element to the specified file.</doc>
@@ -47,8 +46,8 @@
 <arg>${root}</arg>
 <arg>${EXECDIR}\\Test1\\Variables\\testws2.xml</arg>
 </arguments>
-<msg timestamp="20181008 11:18:26.063" html="yes" level="INFO">XML saved to &lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml&lt;/a&gt;.</msg>
-<status status="PASS" endtime="20181008 11:18:26.065" starttime="20181008 11:18:26.060"></status>
+<msg timestamp="20181008 11:46:17.032" html="yes" level="INFO">XML saved to &lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml&lt;/a&gt;.</msg>
+<status status="PASS" endtime="20181008 11:46:17.033" starttime="20181008 11:46:17.028"></status>
 </kw>
 <kw name="Create Soap Client" library="SudsLibrary">
 <doc>Loads a WSDL from the given URL/path and creates a Suds SOAP client.</doc>
@@ -58,31 +57,129 @@
 <assign>
 <var>${test}</var>
 </assign>
-<msg timestamp="20181008 11:18:26.963" level="FAIL">TransportError: HTTP Error 401: Authorization Required</msg>
-<status status="FAIL" endtime="20181008 11:18:26.964" starttime="20181008 11:18:26.065"></status>
+<msg timestamp="20181008 11:46:17.674" level="FAIL">TransportError: HTTP Error 401: Authorization Required</msg>
+<status status="FAIL" endtime="20181008 11:46:17.675" starttime="20181008 11:46:17.035"></status>
 </kw>
-<status status="FAIL" endtime="20181008 11:18:26.965" critical="yes" starttime="20181008 11:18:26.050">TransportError: HTTP Error 401: Authorization Required</status>
+<status status="FAIL" endtime="20181008 11:46:17.676" critical="yes" starttime="20181008 11:46:16.995">TransportError: HTTP Error 401: Authorization Required</status>
 </test>
-<status status="FAIL" endtime="20181008 11:18:26.966" starttime="20181008 11:18:25.272"></status>
+<status status="FAIL" endtime="20181008 11:46:17.678" starttime="20181008 11:46:14.301"></status>
 </suite>
-<status status="FAIL" endtime="20181008 11:18:26.969" starttime="20181008 11:18:25.269"></status>
+<suite source="C:\Users\zapathan\git\RobotPOC\Test1\TestCases\TestCase1.robot" id="s1-s1-s1-s2" name="TestCase1">
+<test id="s1-s1-s1-s2-t1" name="TC1_Test">
+<kw name="LaunchURL" library="TestRes1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181008 11:46:17.734" level="INFO">Opening browser 'Chrome' to base url 'http://newtours.demoaut.com/mercurywelcome.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181008 11:46:26.930" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20181008 11:46:26.931" starttime="20181008 11:46:26.926"></status>
+</kw>
+<msg timestamp="20181008 11:46:26.937" level="FAIL">WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 0
+</msg>
+<status status="FAIL" endtime="20181008 11:46:26.938" starttime="20181008 11:46:17.732"></status>
+</kw>
+<status status="FAIL" endtime="20181008 11:46:29.246" starttime="20181008 11:46:17.730"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181008 11:46:29.250" starttime="20181008 11:46:29.248"></status>
+</kw>
+<tags>
+<tag>SmokeTest</tag>
+</tags>
+<status status="FAIL" endtime="20181008 11:46:29.251" critical="yes" starttime="20181008 11:46:17.728">WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 0
+</status>
+</test>
+<test id="s1-s1-s1-s2-t2" name="TC2_Test">
+<kw name="LaunchURL" library="TestRes1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181008 11:46:29.257" level="INFO">Opening browser 'Chrome' to base url 'http://newtours.demoaut.com/mercurywelcome.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181008 11:46:36.179" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20181008 11:46:36.179" starttime="20181008 11:46:36.177"></status>
+</kw>
+<msg timestamp="20181008 11:46:36.182" level="FAIL">WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 0
+</msg>
+<status status="FAIL" endtime="20181008 11:46:36.182" starttime="20181008 11:46:29.256"></status>
+</kw>
+<status status="FAIL" endtime="20181008 11:46:38.496" starttime="20181008 11:46:29.255"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181008 11:46:38.500" starttime="20181008 11:46:38.498"></status>
+</kw>
+<doc>This will show on Allure Report Description</doc>
+<tags>
+<tag>TestSuite1</tag>
+</tags>
+<status status="FAIL" endtime="20181008 11:46:38.500" critical="yes" starttime="20181008 11:46:29.253">WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 0
+</status>
+</test>
+<test id="s1-s1-s1-s2-t3" name="TC3_Test">
+<kw name="LaunchURL" library="TestRes1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181008 11:46:38.506" level="INFO">Opening browser 'Chrome' to base url 'http://newtours.demoaut.com/mercurywelcome.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181008 11:46:46.005" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20181008 11:46:46.006" starttime="20181008 11:46:46.001"></status>
+</kw>
+<msg timestamp="20181008 11:46:46.008" level="FAIL">WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 0
+</msg>
+<status status="FAIL" endtime="20181008 11:46:46.009" starttime="20181008 11:46:38.505"></status>
+</kw>
+<status status="FAIL" endtime="20181008 11:46:48.347" starttime="20181008 11:46:38.504"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181008 11:46:48.350" starttime="20181008 11:46:48.348"></status>
+</kw>
+<doc>This will register User</doc>
+<tags>
+<tag>TestSuite1</tag>
+</tags>
+<status status="FAIL" endtime="20181008 11:46:48.351" critical="yes" starttime="20181008 11:46:38.502">WebDriverException: Message: Service chromedriver unexpectedly exited. Status code was: 0
+</status>
+</test>
+<status status="FAIL" endtime="20181008 11:46:48.353" starttime="20181008 11:46:17.682"></status>
 </suite>
-<status status="FAIL" endtime="20181008 11:18:26.971" starttime="20181008 11:18:25.265"></status>
+<status status="FAIL" endtime="20181008 11:46:48.361" starttime="20181008 11:46:14.296"></status>
 </suite>
-<status status="FAIL" endtime="20181008 11:18:26.972" starttime="20181008 11:18:25.238"></status>
+<status status="FAIL" endtime="20181008 11:46:48.367" starttime="20181008 11:46:14.287"></status>
+</suite>
+<status status="FAIL" endtime="20181008 11:46:48.372" starttime="20181008 11:46:14.244"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="4" pass="0">Critical Tests</stat>
+<stat fail="4" pass="0">All Tests</stat>
 </total>
 <tag>
+<stat fail="1" pass="0">SmokeTest</stat>
+<stat fail="2" pass="0">TestSuite1</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="RobotPOC" pass="0">RobotPOC</stat>
-<stat fail="1" id="s1-s1" name="Test1" pass="0">RobotPOC.Test1</stat>
-<stat fail="1" id="s1-s1-s1" name="TestCases" pass="0">RobotPOC.Test1.TestCases</stat>
+<stat fail="4" id="s1" name="RobotPOC" pass="0">RobotPOC</stat>
+<stat fail="4" id="s1-s1" name="Test1" pass="0">RobotPOC.Test1</stat>
+<stat fail="4" id="s1-s1-s1" name="TestCases" pass="0">RobotPOC.Test1.TestCases</stat>
 <stat fail="1" id="s1-s1-s1-s1" name="SoapTest1" pass="0">RobotPOC.Test1.TestCases.SoapTest1</stat>
+<stat fail="3" id="s1-s1-s1-s2" name="TestCase1" pass="0">RobotPOC.Test1.TestCases.TestCase1</stat>
 </suite>
 </statistics>
 <errors>
