@@ -32,4 +32,3 @@ TestSoapWS2
     Create WS Client
     Send WS request
     Validate Response
-      

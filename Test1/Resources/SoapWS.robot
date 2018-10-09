@@ -4,6 +4,7 @@ Library           Collections
 Library           Dialogs
 Library           BuiltIn
 Library           SudsLibrary
+Library           String
 Library           XML
 Variables         ../Variables/Variables1.yaml
 Variables         ../Variables/Variables2.yaml
@@ -13,7 +14,8 @@ Variables         ../Variables/WS.yaml
 GetRequestXML
     ${xmlData}=    Get Binary File    ${RequestXML}
     ${root}=    Parse Xml    ${xmlData}
-    Set Element Text    ${root}    250    ${ReqPath}
+    ${NumtoWordSt}=    Convert To String    ${NumtoWord}
+    Set Element Text    ${root}    ${NumtoWordSt}    xpath=${ReqPath}
     Save Xml    ${root}    ${RequestXML2}
     
 Create WS Client

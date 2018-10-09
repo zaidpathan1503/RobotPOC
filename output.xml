@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181008 16:46:55.172" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
+<robot generated="20181008 17:41:33.803" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
 <suite source="C:\Users\zapathan\git\RobotPOC" id="s1" name="RobotPOC">
 <suite source="C:\Users\zapathan\git\RobotPOC\Test1" id="s1-s1" name="Test1">
 <suite source="C:\Users\zapathan\git\RobotPOC\Test1\TestCases" id="s1-s1-s1" name="TestCases">
@@ -14,12 +14,12 @@
 <assign>
 <var>${xmlData}</var>
 </assign>
-<msg timestamp="20181008 16:46:56.211" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml&lt;/a&gt;'.</msg>
-<msg timestamp="20181008 16:46:56.211" level="INFO">${xmlData} = &lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.dataaccess.com/webservicesserver/"&gt;
+<msg timestamp="20181008 17:41:34.853" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws.xml&lt;/a&gt;'.</msg>
+<msg timestamp="20181008 17:41:34.854" level="INFO">${xmlData} = &lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.dataaccess.com/webservicesserver/"&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
       &lt;web:NumberToWords...</msg>
-<status status="PASS" endtime="20181008 16:46:56.212" starttime="20181008 16:46:56.210"></status>
+<status status="PASS" endtime="20181008 17:41:34.854" starttime="20181008 17:41:34.852"></status>
 </kw>
 <kw name="Parse Xml" library="XML">
 <doc>Parses the given XML file or string into an element structure.</doc>
@@ -29,17 +29,28 @@
 <assign>
 <var>${root}</var>
 </assign>
-<msg timestamp="20181008 16:46:56.214" level="INFO">${root} = &lt;Element 'Envelope' at 0x00000000043BC3F0&gt;</msg>
-<status status="PASS" endtime="20181008 16:46:56.214" starttime="20181008 16:46:56.213"></status>
+<msg timestamp="20181008 17:41:34.857" level="INFO">${root} = &lt;Element 'Envelope' at 0x00000000041E3570&gt;</msg>
+<status status="PASS" endtime="20181008 17:41:34.857" starttime="20181008 17:41:34.855"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${NumtoWord}</arg>
+</arguments>
+<assign>
+<var>${NumtoWordSt}</var>
+</assign>
+<msg timestamp="20181008 17:41:34.860" level="INFO">${NumtoWordSt} = 8787</msg>
+<status status="PASS" endtime="20181008 17:41:34.860" starttime="20181008 17:41:34.858"></status>
 </kw>
 <kw name="Set Element Text" library="XML">
 <doc>Sets text and/or tail text of the specified element.</doc>
 <arguments>
 <arg>${root}</arg>
-<arg>250</arg>
-<arg>${ReqPath}</arg>
+<arg>${NumtoWordSt}</arg>
+<arg>xpath=${ReqPath}</arg>
 </arguments>
-<status status="PASS" endtime="20181008 16:46:56.216" starttime="20181008 16:46:56.215"></status>
+<status status="PASS" endtime="20181008 17:41:34.862" starttime="20181008 17:41:34.861"></status>
 </kw>
 <kw name="Save Xml" library="XML">
 <doc>Saves the given element to the specified file.</doc>
@@ -47,10 +58,10 @@
 <arg>${root}</arg>
 <arg>${RequestXML2}</arg>
 </arguments>
-<msg timestamp="20181008 16:46:56.220" html="yes" level="INFO">XML saved to &lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml&lt;/a&gt;.</msg>
-<status status="PASS" endtime="20181008 16:46:56.221" starttime="20181008 16:46:56.217"></status>
+<msg timestamp="20181008 17:41:34.865" html="yes" level="INFO">XML saved to &lt;a href="file://C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml"&gt;C:\Users\zapathan\git\RobotPOC\Test1\Variables\testws2.xml&lt;/a&gt;.</msg>
+<status status="PASS" endtime="20181008 17:41:34.866" starttime="20181008 17:41:34.863"></status>
 </kw>
-<status status="PASS" endtime="20181008 16:46:56.222" starttime="20181008 16:46:56.209"></status>
+<status status="PASS" endtime="20181008 17:41:34.867" starttime="20181008 17:41:34.850"></status>
 </kw>
 <kw name="Create WS Client" library="SoapWS">
 <kw name="Create Soap Client" library="SudsLibrary">
@@ -61,20 +72,20 @@
 <assign>
 <var>${test}</var>
 </assign>
-<msg timestamp="20181008 16:46:56.257" level="FAIL">TransportError: HTTP Error 401: Authorization Required</msg>
-<status status="FAIL" endtime="20181008 16:46:56.257" starttime="20181008 16:46:56.224"></status>
+<msg timestamp="20181008 17:41:34.902" level="FAIL">TransportError: HTTP Error 401: Authorization Required</msg>
+<status status="FAIL" endtime="20181008 17:41:34.903" starttime="20181008 17:41:34.869"></status>
 </kw>
-<status status="FAIL" endtime="20181008 16:46:56.258" starttime="20181008 16:46:56.223"></status>
+<status status="FAIL" endtime="20181008 17:41:34.904" starttime="20181008 17:41:34.868"></status>
 </kw>
-<status status="FAIL" endtime="20181008 16:46:56.259" critical="yes" starttime="20181008 16:46:56.208">TransportError: HTTP Error 401: Authorization Required</status>
+<status status="FAIL" endtime="20181008 17:41:34.905" critical="yes" starttime="20181008 17:41:34.848">TransportError: HTTP Error 401: Authorization Required</status>
 </test>
-<status status="FAIL" endtime="20181008 16:46:56.261" starttime="20181008 16:46:55.291"></status>
+<status status="FAIL" endtime="20181008 17:41:34.906" starttime="20181008 17:41:33.944"></status>
 </suite>
-<status status="FAIL" endtime="20181008 16:46:56.264" starttime="20181008 16:46:55.287"></status>
+<status status="FAIL" endtime="20181008 17:41:34.910" starttime="20181008 17:41:33.940"></status>
 </suite>
-<status status="FAIL" endtime="20181008 16:46:56.266" starttime="20181008 16:46:55.284"></status>
+<status status="FAIL" endtime="20181008 17:41:34.912" starttime="20181008 17:41:33.935"></status>
 </suite>
-<status status="FAIL" endtime="20181008 16:46:56.268" starttime="20181008 16:46:55.258"></status>
+<status status="FAIL" endtime="20181008 17:41:34.914" starttime="20181008 17:41:33.899"></status>
 </suite>
 <statistics>
 <total>
