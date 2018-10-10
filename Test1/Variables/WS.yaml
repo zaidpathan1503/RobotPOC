@@ -1,9 +1,0 @@
----
-WSDL: http://www.dataaccess.com/webservicesserver/numberconversion.wso?WSDL
-NumtoWord: 8787
-ReqPath: Body/NumberToWords/ubiNum
-ResPath: Body/NumberToWordsResponse/NumberToWordsResult
-RequestXML: Test1\\Variables\\testws.xml
-RequestXML2: Test1\\Variables\\testws2.xml
-
-...

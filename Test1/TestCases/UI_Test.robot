@@ -1,35 +1,27 @@
 *** Settings ***
-Library           SeleniumLibrary
-Library           Collections
-Library           Dialogs
-Library           BuiltIn
-Resource          ../Resources/TestRes1.robot
-Resource          ../Variables/GlobalVariables.robot
-       
+Resource          ../Variables/GlobalVariables.robot       
 
 #Test Teardown
-Default Tags    TestSuite1
+Default Tags    UI_TestSuite
 Test Teardown    Close Browser
+Test Setup    LaunchURL
 *** Test Cases ***
-TC1_Test
+Book_Flight_Return
     [Tags]    SmokeTest
-    LaunchURL
     Login
-    SearchFlight
+    SearchFlight    roundtrip
     SelectFlight
     Personal Details
     Validate Itinerary
     
-TC2_Test
+Book_Flight_Oneway
     [Documentation]    This will show on Allure Report Description
-    LaunchURL
     Login
-    SearchFlight
+    SearchFlight    oneway
     SelectFlight
     Personal Details
     Validate Itinerary
 
-TC3_Test
+Register_User
     [Documentation]    This will register User
-    LaunchURL
     RegisterUser

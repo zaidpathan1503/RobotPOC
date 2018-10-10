@@ -2,8 +2,9 @@
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
    <Header />
    <Body>
-      <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
-         <ubiNum>8787</ubiNum>
-      </NumberToWords>
+      <Add xmlns="http://tempuri.org/">
+         <intA>10</intA>
+         <intB>15</intB>
+      </Add>
    </Body>
 </Envelope>

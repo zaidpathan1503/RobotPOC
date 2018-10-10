@@ -1,341 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181004 14:34:58.595" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
-<suite source="C:\Users\parvyas\eclipse-workspace\Test1" id="s1" name="Test1">
-<suite source="C:\Users\parvyas\eclipse-workspace\Test1\TestCases" id="s1-s1" name="TestCases">
-<suite source="C:\Users\parvyas\eclipse-workspace\Test1\TestCases\TestCase1.robot" id="s1-s1-s1" name="TestCase1">
-<test id="s1-s1-s1-t1" name="TC1_Test">
-<kw name="LaunchURL" library="TestRes1">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the given ``url``.</doc>
+<robot generated="20181010 11:22:33.137" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
+<suite source="C:\Users\parvyas\git\RobotPOC\Test1" id="s1" name="Test1">
+<suite source="C:\Users\parvyas\git\RobotPOC\Test1\TestCases" id="s1-s1" name="TestCases">
+<suite source="C:\Users\parvyas\git\RobotPOC\Test1\TestCases\SoapTest1.robot" id="s1-s1-s1" name="SoapTest1">
+<test id="s1-s1-s1-t1" name="TestSoapWS2">
+<kw name="GetRequestXML" library="SoapWS">
+<kw name="Get Binary File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
 <arguments>
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
+<arg>${RequestXML}</arg>
 </arguments>
-<msg timestamp="20181004 14:34:58.950" level="INFO">Opening browser 'Chrome' to base url 'http://newtours.demoaut.com/mercurywelcome.php'.</msg>
-<status status="PASS" endtime="20181004 14:35:05.350" starttime="20181004 14:34:58.945"></status>
+<assign>
+<var>${xmlData}</var>
+</assign>
+<msg timestamp="20181010 11:22:36.765" html="yes" level="INFO">Getting file '&lt;a href="file://C:\Users\parvyas\git\RobotPOC\Test1\Test1\Variables\testws.xml"&gt;C:\Users\parvyas\git\RobotPOC\Test1\Test1\Variables\testws.xml&lt;/a&gt;'.</msg>
+<msg timestamp="20181010 11:22:36.766" level="FAIL">IOError: [Errno 2] No such file or directory: u'C:\\Users\\parvyas\\git\\RobotPOC\\Test1\\Test1\\Variables\\testws.xml'</msg>
+<status status="FAIL" endtime="20181010 11:22:36.766" starttime="20181010 11:22:36.765"></status>
 </kw>
-<status status="PASS" endtime="20181004 14:35:05.351" starttime="20181004 14:34:58.945"></status>
+<status status="FAIL" endtime="20181010 11:22:36.767" starttime="20181010 11:22:36.763"></status>
 </kw>
-<kw name="Login" library="TestRes1">
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>name: userName</arg>
-<arg>${UserName}</arg>
-</arguments>
-<msg timestamp="20181004 14:35:05.356" level="INFO">Typing text 'mercury' into text field 'name: userName'.</msg>
-<status status="PASS" endtime="20181004 14:35:05.465" starttime="20181004 14:35:05.354"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>name: password</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20181004 14:35:05.466" level="INFO">Typing text 'mercury' into text field 'name: password'.</msg>
-<status status="PASS" endtime="20181004 14:35:05.554" starttime="20181004 14:35:05.466"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>name: login</arg>
-</arguments>
-<msg timestamp="20181004 14:35:05.555" level="INFO">Clicking element 'name: login'.</msg>
-<status status="PASS" endtime="20181004 14:35:10.125" starttime="20181004 14:35:05.555"></status>
-</kw>
-<status status="PASS" endtime="20181004 14:35:10.126" starttime="20181004 14:35:05.352"></status>
-</kw>
-<kw name="SearchFlight" library="TestRes1">
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<doc>Sets radio button group ``group_name`` to ``value``.</doc>
-<arguments>
-<arg>tripType</arg>
-<arg>oneway</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.131" level="INFO">Selecting 'oneway' from radio button 'tripType'.</msg>
-<status status="PASS" endtime="20181004 14:35:10.211" starttime="20181004 14:35:10.129"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>fromPort</arg>
-<arg>Frankfurt</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.212" level="INFO">Selecting options from selection list 'fromPort' by value Frankfurt.</msg>
-<status status="PASS" endtime="20181004 14:35:10.300" starttime="20181004 14:35:10.211"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>fromMonth</arg>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.301" level="INFO">Selecting options from selection list 'fromMonth' by value 10.</msg>
-<status status="PASS" endtime="20181004 14:35:10.358" starttime="20181004 14:35:10.301"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>fromDay</arg>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.358" level="INFO">Selecting options from selection list 'fromDay' by value 10.</msg>
-<status status="PASS" endtime="20181004 14:35:10.424" starttime="20181004 14:35:10.358"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>toPort</arg>
-<arg>London</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.424" level="INFO">Selecting options from selection list 'toPort' by value London.</msg>
-<status status="PASS" endtime="20181004 14:35:10.503" starttime="20181004 14:35:10.424"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>toMonth</arg>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.506" level="INFO">Selecting options from selection list 'toMonth' by value 10.</msg>
-<status status="PASS" endtime="20181004 14:35:10.553" starttime="20181004 14:35:10.504"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>toDay</arg>
-<arg>12</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.554" level="INFO">Selecting options from selection list 'toDay' by value 12.</msg>
-<status status="PASS" endtime="20181004 14:35:10.626" starttime="20181004 14:35:10.554"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>findFlights</arg>
-</arguments>
-<msg timestamp="20181004 14:35:10.626" level="INFO">Clicking element 'findFlights'.</msg>
-<status status="PASS" endtime="20181004 14:35:13.099" starttime="20181004 14:35:10.626"></status>
-</kw>
-<status status="PASS" endtime="20181004 14:35:13.101" starttime="20181004 14:35:10.127"></status>
-</kw>
-<kw name="SelectFlight" library="TestRes1">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>reserveFlights</arg>
-</arguments>
-<msg timestamp="20181004 14:35:13.103" level="INFO">Clicking element 'reserveFlights'.</msg>
-<status status="PASS" endtime="20181004 14:35:14.844" starttime="20181004 14:35:13.103"></status>
-</kw>
-<status status="PASS" endtime="20181004 14:35:14.845" starttime="20181004 14:35:13.102"></status>
-</kw>
-<kw name="Personal Details" library="TestRes1">
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>name: passFirst0</arg>
-<arg>${FirstName}</arg>
-</arguments>
-<msg timestamp="20181004 14:35:14.849" level="INFO">Typing text 'First1 Last1' into text field 'name: passFirst0'.</msg>
-<status status="PASS" endtime="20181004 14:35:15.016" starttime="20181004 14:35:14.847"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>name: passLast0</arg>
-<arg>${LastName}</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.017" level="INFO">Typing text 'Test2' into text field 'name: passLast0'.</msg>
-<status status="PASS" endtime="20181004 14:35:15.117" starttime="20181004 14:35:15.016"></status>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>pass.0.meal</arg>
-<arg>Diabetic</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.119" level="INFO">Selecting options from selection list 'pass.0.meal' by label Diabetic.</msg>
-<status status="PASS" endtime="20181004 14:35:15.195" starttime="20181004 14:35:15.118"></status>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>creditCard</arg>
-<arg>Visa</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.197" level="INFO">Selecting options from selection list 'creditCard' by label Visa.</msg>
-<status status="PASS" endtime="20181004 14:35:15.273" starttime="20181004 14:35:15.196"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>creditnumber</arg>
-<arg>4343456765432123</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.274" level="INFO">Typing text '4343456765432123' into text field 'creditnumber'.</msg>
-<status status="PASS" endtime="20181004 14:35:15.452" starttime="20181004 14:35:15.274"></status>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>cc_exp_dt_mn</arg>
-<arg>07</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.453" level="INFO">Selecting options from selection list 'cc_exp_dt_mn' by label 07.</msg>
-<status status="PASS" endtime="20181004 14:35:15.532" starttime="20181004 14:35:15.452"></status>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>cc_exp_dt_yr</arg>
-<arg>2010</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.532" level="INFO">Selecting options from selection list 'cc_exp_dt_yr' by label 2010.</msg>
-<status status="PASS" endtime="20181004 14:35:15.619" starttime="20181004 14:35:15.532"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>cc_frst_name</arg>
-<arg>TestFName</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.620" level="INFO">Typing text 'TestFName' into text field 'cc_frst_name'.</msg>
-<status status="PASS" endtime="20181004 14:35:15.741" starttime="20181004 14:35:15.619"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>cc_last_name</arg>
-<arg>TestLName</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.742" level="INFO">Typing text 'TestLName' into text field 'cc_last_name'.</msg>
-<status status="PASS" endtime="20181004 14:35:15.875" starttime="20181004 14:35:15.741"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>billAddress1</arg>
-<arg>1325 Borregas Ave</arg>
-</arguments>
-<msg timestamp="20181004 14:35:15.876" level="INFO">Typing text '1325 Borregas Ave' into text field 'billAddress1'.</msg>
-<status status="PASS" endtime="20181004 14:35:16.104" starttime="20181004 14:35:15.876"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>billCity</arg>
-<arg>Sunnyvale</arg>
-</arguments>
-<msg timestamp="20181004 14:35:16.106" level="INFO">Typing text 'Sunnyvale' into text field 'billCity'.</msg>
-<status status="PASS" endtime="20181004 14:35:16.255" starttime="20181004 14:35:16.105"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>billState</arg>
-<arg>CA</arg>
-</arguments>
-<msg timestamp="20181004 14:35:16.256" level="INFO">Typing text 'CA' into text field 'billState'.</msg>
-<status status="PASS" endtime="20181004 14:35:16.349" starttime="20181004 14:35:16.255"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>billZip</arg>
-<arg>94089</arg>
-</arguments>
-<msg timestamp="20181004 14:35:16.350" level="INFO">Typing text '94089' into text field 'billZip'.</msg>
-<status status="PASS" endtime="20181004 14:35:16.466" starttime="20181004 14:35:16.350"></status>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>billCountry</arg>
-<arg>UNITED STATES</arg>
-</arguments>
-<msg timestamp="20181004 14:35:16.468" level="INFO">Selecting options from selection list 'billCountry' by label UNITED STATES.</msg>
-<status status="PASS" endtime="20181004 14:35:16.529" starttime="20181004 14:35:16.467"></status>
-</kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<doc>Selects checkbox identified by ``locator``.</doc>
-<arguments>
-<arg>checkbox</arg>
-</arguments>
-<msg timestamp="20181004 14:35:16.529" level="INFO">Selecting checkbox 'checkbox'.</msg>
-<status status="PASS" endtime="20181004 14:35:16.608" starttime="20181004 14:35:16.529"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>buyFlights</arg>
-</arguments>
-<msg timestamp="20181004 14:35:16.608" level="INFO">Clicking element 'buyFlights'.</msg>
-<status status="PASS" endtime="20181004 14:35:18.852" starttime="20181004 14:35:16.608"></status>
-</kw>
-<status status="PASS" endtime="20181004 14:35:18.853" starttime="20181004 14:35:14.846"></status>
-</kw>
-<kw name="Validate Itinerary" library="TestRes1">
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>xpath: //*[@src="/images/masts/mast_confirmation.gif"]</arg>
-</arguments>
-<msg timestamp="20181004 14:35:18.913" level="INFO">Element 'xpath: //*[@src="/images/masts/mast_confirmation.gif"]' is displayed.</msg>
-<status status="PASS" endtime="20181004 14:35:18.913" starttime="20181004 14:35:18.860"></status>
-</kw>
-<status status="PASS" endtime="20181004 14:35:18.918" starttime="20181004 14:35:18.855"></status>
-</kw>
-<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20181004 14:35:22.286" starttime="20181004 14:35:18.918"></status>
-</kw>
-<tags>
-<tag>SmokeTest</tag>
-</tags>
-<status status="PASS" endtime="20181004 14:35:22.286" critical="yes" starttime="20181004 14:34:58.945"></status>
+<status status="FAIL" endtime="20181010 11:22:36.767" critical="yes" starttime="20181010 11:22:36.762">IOError: [Errno 2] No such file or directory: u'C:\\Users\\parvyas\\git\\RobotPOC\\Test1\\Test1\\Variables\\testws.xml'</status>
 </test>
-<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20181004 14:35:22.291" starttime="20181004 14:35:22.291"></status>
-</kw>
-<status status="PASS" endtime="20181004 14:35:22.296" starttime="20181004 14:34:58.655"></status>
+<status status="FAIL" endtime="20181010 11:22:36.768" starttime="20181010 11:22:33.308"></status>
 </suite>
-<status status="PASS" endtime="20181004 14:35:22.301" starttime="20181004 14:34:58.655"></status>
+<status status="FAIL" endtime="20181010 11:22:36.769" starttime="20181010 11:22:33.306"></status>
 </suite>
-<status status="PASS" endtime="20181004 14:35:22.306" starttime="20181004 14:34:58.635"></status>
+<status status="FAIL" endtime="20181010 11:22:36.770" starttime="20181010 11:22:33.258"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">SmokeTest</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Test1" pass="1">Test1</stat>
-<stat fail="0" id="s1-s1" name="TestCases" pass="1">Test1.TestCases</stat>
-<stat fail="0" id="s1-s1-s1" name="TestCase1" pass="1">Test1.TestCases.TestCase1</stat>
+<stat fail="1" id="s1" name="Test1" pass="0">Test1</stat>
+<stat fail="1" id="s1-s1" name="TestCases" pass="0">Test1.TestCases</stat>
+<stat fail="1" id="s1-s1-s1" name="SoapTest1" pass="0">Test1.TestCases.SoapTest1</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20181004 14:34:58.935" level="ERROR">Error in file 'C:\Users\parvyas\eclipse-workspace\Test1\TestCases\TestCase1.robot': Importing test library 'AllureReportLibrary' failed: ImportError: No module named AllureReportLibrary
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Python27\Lib\site-packages
-  C:\Python27\Lib
-  C:\WINDOWS\system32\python27.zip
-  C:\Python27\DLLs
-  C:\Python27\lib
-  C:\Python27\lib\plat-win
-  C:\Python27\lib\lib-tk
-  C:\Python27
-  C:\Python27\lib\site-packages
-  C:\Python27\lib\site-packages\win32
-  C:\Python27\lib\site-packages\win32\lib
-  C:\Python27\lib\site-packages\Pythonwin
-  C:\Python27\lib\site-packages\wx-2.8-msw-unicode</msg>
 </errors>
 </robot>

@@ -1,0 +1,30 @@
+---
+WSDL: http://www.dneonline.com/calculator.asmx?wsdl
+TempXML: Test1\\Variables\\SOAPRequests\\Temp.xml
+
+Multiply:
+  intA: 15
+  intB: 20
+  MethodName: Multiply
+  ReqPath: Body/Multiply
+  ResPath: Body/MultiplyResponse/MultiplyResult
+  RequestXML: Test1\\Variables\\SOAPRequests\\Multiply.xml
+
+Add:
+  intA: 10
+  intB: 15
+  MethodName: Add
+  ReqPath: Body/Add
+  ResPath: Body/AddResponse/AddResult
+  RequestXML:  Test1\\Variables\\SOAPRequests\\Add.xml
+
+Subtract:
+  intA: 50
+  intB: 15
+  MethodName: Subtract
+  ReqPath: Body/Subtract
+  ResPath: Body/SubtractResponse/SubtractResult
+  RequestXML:  Test1\\Variables\\SOAPRequests\\Subtract.xml
+  
+  
+...
