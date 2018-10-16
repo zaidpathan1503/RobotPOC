@@ -2,9 +2,9 @@
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
    <Header />
    <Body>
-      <Add xmlns="http://tempuri.org/">
-         <intA>10</intA>
+      <Subtract xmlns="http://tempuri.org/">
+         <intA>50</intA>
          <intB>15</intB>
-      </Add>
+      </Subtract>
    </Body>
 </Envelope>

@@ -1,9 +1,9 @@
 *** Settings ***
 Resource          ../Variables/GlobalVariables.robot
 
-
 *** Keywords ***
 GetRequestXML
+    [Documentation]    Parse the Request XML
     [Arguments]    ${ReqParam}
     ${xmlData}=    Get Binary File    ${ReqParam.RequestXML}
     ${root}=    Parse Xml    ${xmlData}
@@ -14,10 +14,12 @@ GetRequestXML
     Save Xml    ${root}    ${TempXML}
     
 Create WS Client
+    [Documentation]    Create WS Client
     ${test}    Create Soap Client    ${WSDL}
     log  ${test}
    
-Execute WS Request 
+Execute WS Request
+    [Documentation]    Execute WS Request
     [Arguments]    ${ReqParam}
     ${xmlData}=    Get Binary File    ${TempXML}
     ${Response}=    Set Return Xml    True
@@ -30,6 +32,4 @@ Execute WS Request
     Log    ${message}
     ${root}=    Parse Xml    ${message}
     ${ResponseVal}=    Get Element Text    ${root}    ${ReqParam.ResPath}
-    Log    ${ResponseVal}     
-
-
+    Log    ${ResponseVal}

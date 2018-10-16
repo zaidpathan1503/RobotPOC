@@ -12,5 +12,7 @@ Library           OperatingSystem
 Library           Dialogs
 Resource          ../Resources/Res_WebServices.robot
 Resource          ../Resources/Res_WebApp.robot
+Resource          ../Resources/Res_WebApp_xp.robot
 Variables         ../Variables/WebServices.yaml
 Variables         ../Variables/WebApp.yaml
+Variables         ../Variables/Locators.yaml

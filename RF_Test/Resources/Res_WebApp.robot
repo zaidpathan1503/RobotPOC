@@ -10,8 +10,8 @@ Login
     Click Element    name: login
 
 LaunchURL
+    [Documentation]    feature: Navigate to the application URL
     Open Browser    ${URL}    ${Browser}
-
 SearchFlight
     [Documentation]    feature: Search Flights from desired from and to location
     [Arguments]    ${trip}
@@ -27,10 +27,12 @@ SearchFlight
     Click Element    findFlights
 
 SelectFlight
+    [Documentation]    feature: Select Flights from available results
     #Select Radio Button    outFlight
     Click Element    reserveFlights
 
 Personal Details
+    [Documentation]    feature: Enter personal details to confirm booking
     Input Text    name: passFirst0    ${FirstName}
     Input Text    name: passLast0    ${LastName}
     Select From List By Label    pass.0.meal    Diabetic
@@ -49,6 +51,7 @@ Personal Details
     Click Element    buyFlights
 
 Validate Itinerary
+    [Documentation]    feature: Validate valid Itinerary is displayed
     Element Should Be Visible    xpath: //*[@src="/images/masts/mast_confirmation.gif"]
 
 RegisterUser
