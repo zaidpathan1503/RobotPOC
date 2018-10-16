@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <projectConfiguration>
     <configVersion>2</configVersion>
-    <robotExecEnvironment path="C:/Python27" interpreter="Python"/>
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Python27/Lib/site-packages"/>
-    <referencedLibrary type="PYTHON" name="AllureReportLibrary" path="C:/Python27/Lib/site-packages"/>
+    <referencedLibrary type="PYTHON" name="SudsLibrary" path="C:/Python27/Lib/site-packages"/>
     <pythonpath>
         <path location="C:\Python27\Lib"/>
         <path location="C:\Python27\Lib\site-packages\"/>
