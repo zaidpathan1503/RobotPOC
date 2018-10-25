@@ -6,7 +6,7 @@ Login
     [Documentation]    feature: Login to Mercury Travels application with correct user
     Set Tags    Smoke    Story: Login to Mercury Travels with user mercury/mercury
     Input Text    name: userName    ${UserName}
-    Input Text    name: password    ${password}
+    Input Text    name: password    ${Password}
     Click Element    name: login
 
 LaunchURL
@@ -14,9 +14,9 @@ LaunchURL
     Open Browser    ${URL}    ${Browser}
 SearchFlight
     [Documentation]    feature: Search Flights from desired from and to location
-    [Arguments]    ${trip}
+    [Arguments]    ${Trip}
     Set Tags    Smoke    Story: Given a search page when from and to destination are available Then User should be able to search for flights.
-    Select Radio Button    tripType    ${trip}
+    Select Radio Button    tripType    ${Trip}
     Select From List By Value    fromPort    Frankfurt
     Select From List By Value    fromMonth    10
     Select From List By Value    fromDay    10
@@ -60,9 +60,9 @@ RegisterUser
     #Click Link    xpath: //a[@href="mercuryregister.php"]
     #Sleep    2s
     Click Link    xpath: //a[contains(text(),'REGISTER')]
-    Input Text    firstName    ${NewUser.firstName}
-    Input Text    lastName    ${NewUser.lastName}
-    Input Text    phone    ${NewUser.phone}
+    Input Text    firstName    ${NewUser.FirstName}
+    Input Text    lastName    ${NewUser.LastName}
+    Input Text    phone    ${NewUser.Phone}
     Input Text    userName    ${NewUser.Email_ID}
     Input Text    address1    ${NewUser.Address1}
     Input Text    address2    ${NewUser.Address2}
@@ -71,6 +71,6 @@ RegisterUser
     Input Text    postalCode    ${NewUser.PostalCode}
     Select From List By Label    country    ${NewUser.Country}
     Input Text    email    ${NewUser.UserName}
-    Input Text    password    ${NewUser.password}
-    Input Text    confirmPassword    ${NewUser.password}
+    Input Text    password    ${NewUser.Password}
+    Input Text    confirmPassword    ${NewUser.Password}
     Click Element    register

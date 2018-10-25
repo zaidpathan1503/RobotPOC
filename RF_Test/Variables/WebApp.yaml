@@ -2,13 +2,13 @@
 URL: http://newtours.demoaut.com/mercurywelcome.php
 Browser: Chrome
 UserName: mercury
-password: mercury
+Password: mercury
 FirstName: First1 Last1
 LastName: Test2
 NewUser:
-  firstName: FirstName1
-  lastName: LastName1
-  phone: +91 97892 23145
+  FirstName: FirstName1
+  LastName: LastName1
+  Phone: +91 97892 23145
   Email_ID: abc@gmail.com
   Address1: Line 1
   Address2: Line 2
@@ -17,6 +17,6 @@ NewUser:
   PostalCode: M41 ZKY
   Country: CANADA
   UserName: test
-  password: test
+  Password: test
   
 ...
