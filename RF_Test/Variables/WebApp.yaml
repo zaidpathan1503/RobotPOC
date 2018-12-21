@@ -1,0 +1,22 @@
+---
+URL: http://newtours.demoaut.com/mercurywelcome.php
+Browser: Chrome
+UserName: mercury
+Password: mercury
+FirstName: First1 Last1
+LastName: Test2
+NewUser:
+  FirstName: FirstName1
+  LastName: LastName1
+  Phone: +91 97892 23145
+  Email_ID: abc@gmail.com
+  Address1: Line 1
+  Address2: Line 2
+  City: Kitchener
+  State: Ontario
+  PostalCode: M41 ZKY
+  Country: CANADA
+  UserName: test
+  Password: test
+  
+...
