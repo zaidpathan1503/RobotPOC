@@ -10,6 +10,7 @@ Library           XML
 Library           String
 Library           OperatingSystem
 Library           Dialogs
+Library           WhiteLibrary
 Resource          ../Resources/Res_WebServices.robot
 Resource          ../Resources/Res_WebApp.robot
 Resource          ../Resources/Res_WebApp_xp.robot

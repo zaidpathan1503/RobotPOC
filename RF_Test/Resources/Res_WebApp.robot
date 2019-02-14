@@ -16,7 +16,7 @@ SearchFlight
     [Documentation]    feature: Search Flights from desired from and to location
     [Arguments]    ${Trip}
     Set Tags    Smoke    Story: Given a search page when from and to destination are available Then User should be able to search for flights.
-    Select Radio Button    tripType    ${Trip}
+    SeleniumLibrary.Select Radio Button    tripType    ${Trip}
     Select From List By Value    fromPort    Frankfurt
     Select From List By Value    fromMonth    10
     Select From List By Value    fromDay    10
